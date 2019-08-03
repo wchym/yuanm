@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+         - id: gateway-c1
+           uri: lb://gateway-c1
+           predicates:
+           - Path=/test/**
+           #- Method=POST
+           #- Cookie=test, yyyy
+           #- Header=token,(.*) #表示任意的字符
+           filters: #表示去掉api前缀
+             - StripPrefix=1
+#             - name: RequestRateLimiter
+#               args:
+#                    keyResolver: "#{@remoteAddrKeyResolver}"
+#                    redis-rate-limiter.replenishRate: 1 #单位时间允许内执行请求的个数
+#                    redis-rate-limiter.burstCapacity: 2 #单位时间内允许向桶中放入令牌的数量
+
+
