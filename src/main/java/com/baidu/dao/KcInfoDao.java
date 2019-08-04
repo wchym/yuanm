@@ -10,4 +10,5 @@ public interface KcInfoDao extends JpaRepository<Kc,Long>{
     //2222
 //    发的发的发的
     //3333
+    //444
 }
