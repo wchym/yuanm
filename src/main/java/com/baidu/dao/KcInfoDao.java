@@ -9,4 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface KcInfoDao extends JpaRepository<Kc,Long>{
     //2222
 //    发的发的发的
+    //3333
 }
